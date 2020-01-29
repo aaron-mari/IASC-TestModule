@@ -1,0 +1,17 @@
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.Properties.Resources.resources
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csproj.GenerateResource.Cache
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.pdb
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\bin\Debug\mysql.data.dll
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.exe
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.pdb
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csprojResolveAssemblyReference.cache
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmManage.resources
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmLogin.resources
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmMain.resources
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe.config
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmUpdateStudent.resources
+D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.updateStudent.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe.config
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.exe
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.pdb
