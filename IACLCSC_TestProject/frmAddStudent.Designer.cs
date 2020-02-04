@@ -1,6 +1,6 @@
 ﻿namespace IACLCSC_TestProject
 {
-    partial class frmUpdateStudent
+    partial class frmAddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -267,7 +267,7 @@
             this.txtGender.Size = new System.Drawing.Size(217, 20);
             this.txtGender.TabIndex = 5;
             // 
-            // frmUpdateStudent
+            // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,7 +296,7 @@
             this.Controls.Add(this.btnAddImage);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblName);
-            this.Name = "frmUpdateStudent";
+            this.Name = "frmAddStudent";
             this.Text = "Adding new Record";
             this.Load += new System.EventHandler(this.adduser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

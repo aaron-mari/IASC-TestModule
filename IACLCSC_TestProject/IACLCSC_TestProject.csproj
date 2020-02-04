@@ -94,11 +94,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
-    <Compile Include="updateStudent.cs">
+    <Compile Include="frmUpdateStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="updateStudent.Designer.cs">
-      <DependentUpon>updateStudent.cs</DependentUpon>
+    <Compile Include="frmUpdateStudent.Designer.cs">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="user.cs" />
     <EmbeddedResource Include="frmAddStudent.resx">
@@ -123,8 +123,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="updateStudent.resx">
-      <DependentUpon>updateStudent.cs</DependentUpon>
+    <EmbeddedResource Include="frmUpdateStudent.resx">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />

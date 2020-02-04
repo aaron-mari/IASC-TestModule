@@ -11,12 +11,12 @@ using System.IO;
 
 namespace IACLCSC_TestProject
 {
-    public partial class frmUpdateStudent : Form
+    public partial class frmAddStudent : Form
     {
         Image picture;
         String imagePath;
 
-        public frmUpdateStudent()
+        public frmAddStudent()
         {
             InitializeComponent();
             imagePath = "C:\\Inventory System\\Records\\images\\";

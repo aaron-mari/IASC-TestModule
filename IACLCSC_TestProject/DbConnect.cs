@@ -22,13 +22,13 @@ namespace IACLCSC_TestProject
         public DbConnect()
         {
             this.server = "localhost";
-            this.db = "testproject";
+            this.db = "IACSC-TestProject";
             this.user = "root";
-            this.password = "";
+            this.password = "toor";
             //initalize the connection object
             con = new MySqlConnection();
             // string = server=localhost;database=iacsc-testproject;uid=root;
-            con.ConnectionString = String.Format("server={0};database={1};uid={2};", this.server, this.db, this.user);
+            con.ConnectionString = String.Format("server={0};database={1};uid={2};pwd={3};", this.server, this.db, this.user, this.password);
             //MessageBox.Show(con.ConnectionString);
         }
         public DataTable retrieveTable(String sqlcmd)

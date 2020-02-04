@@ -15,3 +15,14 @@ D:\Aaron John C Mari - BSCS\IACLCSC_TestProject\IACLCSC_TestProject\obj\x86\Debu
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe.config
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.exe
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.pdb
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.pdb
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\bin\Debug\mysql.data.dll
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmUpdateStudent.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmLogin.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmMain.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmManage.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmAddStudent.resources
