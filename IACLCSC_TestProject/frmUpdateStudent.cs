@@ -69,17 +69,31 @@ namespace IACLCSC_TestProject
                     Directory.CreateDirectory(imagePath);
                 picture.Save(imagePath + openFileDialog1.SafeFileName.ToString());
 
-
+                
+                currentStudent.FirstName = txtFirstName.Text;
+                currentStudent.MiddleName = txtMiddleName.Text;
+                currentStudent.LastName = txtLastName.Text;
+                currentStudent.Dob = dateTimePicker1.Value;
+                currentStudent.Gender = txtGender.Text;
+                currentStudent.Address  = txtAddress.Text;
+                currentStudent.ContactNo = txtContactNo.Text;
+                currentStudent.Email = txtEmail.Text;
+                currentStudent.Course = cmbCourse.SelectedIndex + 1;
+                currentStudent.YearLevel = cmbYearLevel.SelectedIndex + 1;
+                currentStudent.Picture = imagePath + openFileDialog1.SafeFileName.ToString();
+                
+                currentStudent.updateRecord();
                 //Success
-                MessageBox.Show("Added new record to database!", "Add Success", MessageBoxButtons.OK);
+                MessageBox.Show("Successfully updated record!", "Add Success", MessageBoxButtons.OK);
                 //MessageBox.Show(openFileDialog1.FileName);
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error adding Student: " + ex.Message, "Error!", MessageBoxButtons.OK);
             }
 
-            //currentStudent.updateRecord();
+            
         }
 
         private void btnAddImage_Click(object sender, EventArgs e)
@@ -126,7 +140,12 @@ namespace IACLCSC_TestProject
             currentStudent = stud;
             db = new DbConnect();
             courses = db.retrieveTable("SELECT courseName FROM course");
-            yearLevels = db.retrieveTable("SELECT yearLevel FROM yearLevel");
+            yearLevels = db.retrieveTable("SELECT yearLevel FROM year");
+            DataTable student_id_table = db.retrieveTable(String.Format("SELECT id FROM studentsinfo WHERE firstname='{0}'AND middleName='{1}' AND lastName='{2}'", currentStudent.FirstName, currentStudent.MiddleName, currentStudent.LastName));
+            if(student_id_table.Rows[0][0]!=null) 
+            {
+                currentStudent.Id = int.Parse(student_id_table.Rows[0][0].ToString());
+            }
             imagePath = "C:\\Inventory System\\Records\\images\\";
 
             foreach (DataRow r in courses.AsEnumerable())
@@ -143,6 +162,7 @@ namespace IACLCSC_TestProject
             txtMiddleName.Text = currentStudent.MiddleName;
             txtLastName.Text = currentStudent.LastName;
             dateTimePicker1.Value = currentStudent.Dob;
+            txtGender.Text = currentStudent.Gender;
             txtAddress.Text = currentStudent.Address;
             txtContactNo.Text = currentStudent.ContactNo;
             txtEmail.Text = currentStudent.Email;
@@ -151,6 +171,13 @@ namespace IACLCSC_TestProject
             cmbYearLevel.SelectedIndex = currentStudent.YearLevel-1;
             picture = Image.FromFile(currentStudent.Picture);
             pictureBox1.BackgroundImage = picture;
+
+            
+        }
+
+        private void frmUpdateStudent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

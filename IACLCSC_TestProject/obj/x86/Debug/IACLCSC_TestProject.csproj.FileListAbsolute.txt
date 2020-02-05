@@ -26,3 +26,17 @@ C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_Te
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.Properties.Resources.resources
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csproj.GenerateResource.Cache
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmAddStudent.resources
+E:\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe.config
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.exe
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.pdb
+E:\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.exe
+E:\IASC-TestModule\IACLCSC_TestProject\bin\Debug\IACLCSC_TestProject.pdb
+E:\IASC-TestModule\IACLCSC_TestProject\bin\Debug\mysql.data.dll
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csprojResolveAssemblyReference.cache
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmAddStudent.resources
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmLogin.resources
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmMain.resources
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmManage.resources
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.Properties.Resources.resources
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmUpdateStudent.resources
+E:\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csproj.GenerateResource.Cache

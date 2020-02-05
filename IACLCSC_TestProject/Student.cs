@@ -232,7 +232,9 @@ namespace IACLCSC_TestProject
 
         public void updateRecord()
         {
-            String sql = "UPDATE studentsinfo SET (firstName='{0}', middleName='{1}', lastName='{2}') WHERE";
+            String sql = String.Format("UPDATE studentsinfo SET firstName='{1}', middleName='{2}', lastName='{3}' WHERE id={0}",
+                this.id, this.firstName, this.middleName,this.lastName);
+            db.insertData(sql);
         }
         
 

@@ -24,7 +24,7 @@ namespace IACLCSC_TestProject
             this.server = "localhost";
             this.db = "IACSC-TestProject";
             this.user = "root";
-            this.password = "toor";
+            this.password = "";
             //initalize the connection object
             con = new MySqlConnection();
             // string = server=localhost;database=iacsc-testproject;uid=root;
