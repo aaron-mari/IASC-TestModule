@@ -26,3 +26,4 @@ C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_Te
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.Properties.Resources.resources
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.csproj.GenerateResource.Cache
 C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmAddStudent.resources
+C:\Users\Lenovo\Desktop\Inter ACLC Skills Competition\IASC-TestModule\IACLCSC_TestProject\obj\x86\Debug\IACLCSC_TestProject.frmAddUser.resources

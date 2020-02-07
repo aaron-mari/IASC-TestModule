@@ -24,7 +24,7 @@ namespace IACLCSC_TestProject
             this.Close();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             //Use the same validations as the Add Form
             Exception emptyField = new Exception("Fields must not be empty!");
@@ -69,17 +69,28 @@ namespace IACLCSC_TestProject
                     Directory.CreateDirectory(imagePath);
                 picture.Save(imagePath + openFileDialog1.SafeFileName.ToString());
 
-
+                currentStudent.updateRecord(
+                    txtFirstName.Text, 
+                    txtMiddleName.Text,
+                    txtLastName.Text,
+                    dateTimePicker1.Value,
+                    txtGender.Text,
+                    txtAddress.Text,
+                    txtContactNo.Text,
+                    txtEmail.Text,
+                    cmbCourse.SelectedIndex+1,
+                    cmbYearLevel.SelectedIndex+1,
+                    imagePath + openFileDialog1.SafeFileName.ToString());
                 //Success
-                MessageBox.Show("Added new record to database!", "Add Success", MessageBoxButtons.OK);
-                //MessageBox.Show(openFileDialog1.FileName);
+                MessageBox.Show("Sucessfuly updated record!", "Update Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error adding Student: " + ex.Message, "Error!", MessageBoxButtons.OK);
+                MessageBox.Show("Error updating record: " + ex.Message, "Error!", MessageBoxButtons.OK);
             }
 
-            //currentStudent.updateRecord();
+            //Success; close form
+            this.Close();
         }
 
         private void btnAddImage_Click(object sender, EventArgs e)
@@ -120,6 +131,11 @@ namespace IACLCSC_TestProject
 
         }
 
+        private void frmUpdateStudent_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public frmUpdateStudent(Student stud)
         {
             InitializeComponent();
@@ -127,7 +143,7 @@ namespace IACLCSC_TestProject
             db = new DbConnect();
             courses = db.retrieveTable("SELECT courseName FROM course");
             yearLevels = db.retrieveTable("SELECT yearLevel FROM yearLevel");
-            imagePath = "C:\\Inventory System\\Records\\images\\";
+            imagePath = @"C:\\Inventory System\\Records\\images\\";
 
             foreach (DataRow r in courses.AsEnumerable())
             {
@@ -142,6 +158,7 @@ namespace IACLCSC_TestProject
             txtFirstName.Text = currentStudent.FirstName;
             txtMiddleName.Text = currentStudent.MiddleName;
             txtLastName.Text = currentStudent.LastName;
+            txtGender.Text = currentStudent.Gender;
             dateTimePicker1.Value = currentStudent.Dob;
             txtAddress.Text = currentStudent.Address;
             txtContactNo.Text = currentStudent.ContactNo;
@@ -149,8 +166,15 @@ namespace IACLCSC_TestProject
             //combo box is 0 based
             cmbCourse.SelectedIndex= currentStudent.Course-1;
             cmbYearLevel.SelectedIndex = currentStudent.YearLevel-1;
-            picture = Image.FromFile(currentStudent.Picture);
-            pictureBox1.BackgroundImage = picture;
+            try
+            {
+                picture = Image.FromFile(currentStudent.Picture);
+                pictureBox1.BackgroundImage = picture;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot load picture: " + ex.Message, "Error loading picture", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,12 +99,24 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Location = new System.Drawing.Point(12, 304);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(75, 23);
+            this.btnAddUser.TabIndex = 13;
+            this.btnAddUser.Text = "Add User";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // frmManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 396);
+            this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -111,6 +124,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Managing Records";
             this.Load += new System.EventHandler(this.frmManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -127,6 +141,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
-
+        private System.Windows.Forms.Button btnAddUser;
     }
 }

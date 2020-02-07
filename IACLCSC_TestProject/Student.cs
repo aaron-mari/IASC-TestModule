@@ -219,20 +219,51 @@ namespace IACLCSC_TestProject
                 MiddleName, 
                 LastName,
                 Gender,
-                Dob.ToShortDateString(),
+                Dob.ToString("yyy-MM-dd"),
                 Address,
                 ContactNo,
                 Email,
                 Course.ToString(),
                 YearLevel.ToString(),
                 Picture);
-            MessageBox.Show("SQL STATEMENT: " + sql);
             db.insertData(sql);
         }
 
-        public void updateRecord()
+        public void updateRecord(String firstName, String middleName, String lastName,
+            DateTime Dob, String gender, String address, String contactNo,
+            String email, int course, int yearLevel, String picture)
         {
-            String sql = "UPDATE studentsinfo SET (firstName='{0}', middleName='{1}', lastName='{2}') WHERE";
+            String sql = String.Format("UPDATE studentsinfo SET " +
+                "firstName='{0}'," +
+                "middleName='{1}'," +
+                "lastName='{2}'," +
+                "gender='{3}'," +
+                "birthDate='{4}'," +
+                "address='{5}'," +
+                "contactNo='{6}'," +
+                "email='{7}'," +
+                "courseId={8}," +
+                "yearId={9}," +
+                "image='{10}' WHERE id={11}",
+                firstName,
+                middleName,
+                lastName,
+                gender,
+                Dob.ToString("yyyy-MM-dd"),
+                address,
+                contactNo,
+                email,
+                course,
+                yearLevel,
+                picture,this.id);
+            try
+            {
+                db.insertData(sql);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
         
 

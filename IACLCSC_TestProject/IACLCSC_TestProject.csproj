@@ -73,6 +73,12 @@
       <DependentUpon>frmAddStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnect.cs" />
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="user.cs" />
     <EmbeddedResource Include="frmAddStudent.resx">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
