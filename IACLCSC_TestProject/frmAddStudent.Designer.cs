@@ -297,7 +297,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblName);
             this.Name = "frmAddStudent";
-            this.Text = "Adding new Record";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Add Record";
             this.Load += new System.EventHandler(this.adduser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

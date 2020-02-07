@@ -12,35 +12,92 @@ namespace IACLCSC_TestProject
     {
         private String username;
         private String password;
+        private String userType;
         private bool isAdmin;
+        private bool isLoggedIn;
         DbConnect db;
-        public User(String username, String password, DbConnect db)
+
+        public string UserType
+        {
+            get
+            {
+                return userType;
+            }
+
+            set
+            {
+                userType = value;
+            }
+        }
+
+        public bool IsLoggedIn
+        {
+            get
+            {
+                return isLoggedIn;
+            }
+
+            set
+            {
+                isLoggedIn = value;
+            }
+        }
+
+        public User(String username, String password)
         {
             this.username = username;
             this.password = password;
             this.isAdmin = false;
-            this.db = db;
-            login(this.username, this.password);
+            db = new DbConnect();
+            login();
         }
 
-        private bool ValidateLogin()
-        {
-            DataTable dt = db.retrieveTable(String.Format("SELECT * FROM user where username='{0}' AND password='{1}'", this.username, this.password));
-            if (dt.Rows[0][2].ToString() == "1")
-            {
-                isAdmin = true;
-            }
-            else
-            {
-                isAdmin = false;
-            }
-            return dt.Rows.Count>0?true:false;
-        }
-        public bool login(String username, String password)
+        //this is used for making a new user
+        public User(String username, String password, int type)
         {
             this.username = username;
             this.password = password;
-            return ValidateLogin() ? true : false;
+            this.isAdmin = false;
+            db = new DbConnect();
+            DataTable privileges = db.retrieveTable("SELECT * from privilege");
+            if(privileges.Rows[type][1]!=null)
+            {
+                this.userType = privileges.Rows[type]["privilegeName"].ToString();
+                try
+                {
+                    db.insertData(String.Format("INSERT INTO user VALUES('{0}','{1}',{2});", this.username, this.password, type + 1));
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                throw new Exception("privilege table not found!");
+            }
+            
+
+
+        }
+
+        private String getUserType()
+        {
+            return this.userType;
+        }
+        
+        public void login()
+        {
+            DataTable dt = db.retrieveTable(String.Format("SELECT u.username, u.password, p.privilegeName FROM user AS u JOIN privilege as p ON u.privilegeId=p.id WHERE u.username='{0}' AND u.password='{1}';", this.username, this.password));
+            if(dt.Rows.Count>0)
+            {
+                isLoggedIn = true;
+                isAdmin = (dt.Rows[0]["privilegeName"].ToString() == "Administrator") ? true : false;
+            }
+            else
+            {
+                isLoggedIn = false;
+            }
         }
         public bool isAdminType()
         {

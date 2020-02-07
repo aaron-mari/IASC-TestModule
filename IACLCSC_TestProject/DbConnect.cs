@@ -12,13 +12,12 @@ namespace IACLCSC_TestProject
     public class DbConnect
     {
         String server;
-        String db;
         String user;
         String password;
-
+        String db;
         public MySqlConnection con;
         MySqlDataAdapter dataAdapter;
-        MySqlDataReader reader;
+        
         public DbConnect()
         {
             this.server = "localhost";
@@ -40,11 +39,16 @@ namespace IACLCSC_TestProject
             {
                 con.Open();
                 dataAdapter.Fill(dt);
-                con.Close(); 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cannot retrieve data from database: " + ex.Message);
+                //MessageBox.Show("Cannot retrieve data from database: " + ex.Message);
+                throw ex;
+            }
+            
+            finally
+            {
+                con.Close();
             }
             return dt;
         }
@@ -56,11 +60,32 @@ namespace IACLCSC_TestProject
             {
                 con.Open();
                 c.ExecuteNonQuery();
-                con.Close();
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cannot retrieve data from database: " + ex.Message);
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public void removeData(String cmd)
+        {
+            MySqlCommand c = new MySqlCommand(cmd,con);
+            try
+            {
+                con.Open();
+                c.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

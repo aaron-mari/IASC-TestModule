@@ -14,6 +14,7 @@ namespace IACLCSC_TestProject
     {
         DbConnect db;
         DataTable dt;
+        User user;
         public frmLogin()
         {
             InitializeComponent();
@@ -29,20 +30,24 @@ namespace IACLCSC_TestProject
             }
             else
             {
-                // check to database
-            dt = db.retrieveTable(String.Format("SELECT * FROM user WHERE username='{0}' AND password='{1}';", txtUsername.Text, txtPassword.Text));
-            if(dt.Rows.Count>0)
-            {
-                User user = new User(txtUsername.Text, txtPassword.Text, db);
-                if(dt.Rows[0][2].ToString() == "1")
-                    user.setAdminType();
-                    
-                new frmMain(user, db).ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Invalid user!");
-            }
+                try
+                {
+                    user = new User(txtUsername.Text, txtPassword.Text);
+                    user.login();
+                    if (user.IsLoggedIn)
+                    {
+                        new frmMain(user, db).ShowDialog();
+                    }
+                    else
+                    {
+                        throw new Exception("Username/password not found in database!");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error logging in: " + ex.Message, "Cannot login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             
             
@@ -54,5 +59,9 @@ namespace IACLCSC_TestProject
             this.Close();
         }
 
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

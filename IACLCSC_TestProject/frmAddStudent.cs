@@ -19,7 +19,7 @@ namespace IACLCSC_TestProject
         public frmAddStudent()
         {
             InitializeComponent();
-            imagePath = "C:\\Inventory System\\Records\\images\\";
+            imagePath = @"C:\\Inventory System\\Records\\images\\";
         }
         private void btnAddImage_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace IACLCSC_TestProject
                 cmCourse.Items.Add(r[0].ToString());
             }
             cmYearLvl.Items.Clear();
-            DataTable yearLvl = db.retrieveTable("SELECT yearLevel from year");
+            DataTable yearLvl = db.retrieveTable("SELECT yearLevel from yearLevel");
             foreach (DataRow r in yearLvl.AsEnumerable())
             {
                 cmYearLvl.Items.Add(r[0].ToString());
@@ -137,6 +137,7 @@ namespace IACLCSC_TestProject
                 
                 //Success
                 MessageBox.Show("Added new record to database!", "Add Success", MessageBoxButtons.OK);
+                this.Close();
                 //MessageBox.Show(openFileDialog1.FileName);
             }
             catch (Exception ex)
